@@ -1,28 +1,58 @@
 package com.projectmanagement.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Table(name = "users",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = "username"),
+                @UniqueConstraint(columnNames = "email")
+        })
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long id;
+    @Column(name = "user_id")
+    private Long userId;
 
-    private String name;
+    @NotBlank
+    @Size(max=20)
+    @Column(name = "username")
+    private String userName;
 
-    @Column(unique=true)
+    @NotBlank
+    @Size(max=50)
+    @Email
+    @Column(name = "email")
     private String email;
 
-    private  String password;
+    @NotBlank
+    @Size(max=120)
+    @Column(name = "password")
+    private String password;
 
-    @Enumerated(EnumType.STRING)
-    private Role role;
+    public User(String userName, String email, String password) {
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+    }
+
+
+    @ManyToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},
+    fetch = FetchType.EAGER)
+    @JoinTable(name="user_role",joinColumns = @JoinColumn(name = "user_id"),
+    inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
+
+
 }

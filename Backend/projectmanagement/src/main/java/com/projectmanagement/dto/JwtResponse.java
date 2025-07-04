@@ -1,5 +1,6 @@
 package com.projectmanagement.dto;
 
+import com.projectmanagement.model.AppRole;
 import com.projectmanagement.model.Role;
 import lombok.Data;
 

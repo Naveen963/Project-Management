@@ -4,16 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e2a04a6-c692-4902-bf21-3e4db4470823" name="Changes" comment="Project Management">
-      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/dto/JwtResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/dto/SignInRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/security/JwtFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/security/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/service/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/service/UserService.java" afterDir="false" />
+    <list default="true" id="0e2a04a6-c692-4902-bf21-3e4db4470823" name="Changes" comment="Added user models,repos and jwt auth">
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/AppRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/AuditBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/Issue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/IssuePriority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/IssueStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/security/AuthEntryPointJwt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/ProjectmanagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/ProjectmanagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/dto/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/dto/JwtResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/security/AuthTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/security/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/security/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/service/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -31,18 +42,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Naveen963"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Naveen963&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Naveen963/Project-Management",
-    "accountId": "74fcca26-5bf9-4aea-b25a-4fea4f26da17"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Naveen963/Project-Management&quot;,
+    &quot;accountId&quot;: &quot;74fcca26-5bf9-4aea-b25a-4fea4f26da17&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -58,10 +69,16 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/CH20408545/Desktop/Java/Project Management"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.projectmanagement.model" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="0e2a04a6-c692-4902-bf21-3e4db4470823" name="Changes" comment="" />
@@ -86,11 +103,31 @@
       <option name="project" value="LOCAL" />
       <updated>1751390015104</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added user models,repos and jwt auth">
+      <option name="closed" value="true" />
+      <created>1751393625176</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1751393625176</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project Management" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project Management" />
+    <MESSAGE value="Added user models,repos and jwt auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added user models,repos and jwt auth" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/security/JwtUtils.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
