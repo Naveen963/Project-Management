@@ -46,4 +46,8 @@ public class Issue extends  AuditBase {
     @OneToMany(mappedBy = "issue",cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Comment> comments;
 
+    @ManyToOne
+    @JoinColumn(name = "sprint_id")
+    private Sprint sprint;
+
 }

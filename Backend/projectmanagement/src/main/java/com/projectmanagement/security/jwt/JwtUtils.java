@@ -1,6 +1,6 @@
-package com.projectmanagement.security;
+package com.projectmanagement.security.jwt;
 
-import com.projectmanagement.service.UserDetailsImpl;
+import com.projectmanagement.security.services.UserDetailsImpl;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;

@@ -1,4 +1,4 @@
-package com.projectmanagement.security;
+package com.projectmanagement.security.jwt;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

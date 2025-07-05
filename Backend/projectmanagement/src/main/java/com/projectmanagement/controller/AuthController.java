@@ -2,11 +2,11 @@ package com.projectmanagement.controller;
 
 import com.projectmanagement.repository.RoleRepository;
 import com.projectmanagement.repository.UserRepository;
-import com.projectmanagement.security.JwtUtils;
+import com.projectmanagement.security.jwt.JwtUtils;
 import com.projectmanagement.security.request.LoginRequest;
 import com.projectmanagement.security.response.MessageResponse;
 import com.projectmanagement.security.response.UserInfoResponse;
-import com.projectmanagement.service.UserDetailsImpl;
+import com.projectmanagement.security.services.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -18,18 +18,14 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@Controller
+@RestController
 @RequestMapping(name = "/api/auth")
 public class AuthController {
 
