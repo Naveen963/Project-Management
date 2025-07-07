@@ -26,7 +26,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping(name = "/api/auth")
+@RequestMapping( "/api/auth")
 public class AuthController {
 
     @Autowired
@@ -44,13 +44,13 @@ public class AuthController {
     @Autowired
     PasswordEncoder passwordEncoder;
 
-    @PostMapping("/sign-in")
-    public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest request){
+    @PostMapping("/signin")
+    public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest loginRequest){
         Authentication authentication;
+
         try{
-            authentication = authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(request.getUsername(),
-                            request.getPassword()));
+            authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUsername(),loginRequest.getPassword()));
+
         }
         catch (AuthenticationException exception){
             Map<String,Object> map = new HashMap<>();
@@ -58,8 +58,10 @@ public class AuthController {
             map.put("status",false);
             return  new ResponseEntity<>(map, HttpStatus.NOT_FOUND);
         }
+
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        UserDetailsImpl userDetails =(UserDetailsImpl) authentication.getPrincipal();
+
+        UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
 
         ResponseCookie jwtCookie = jwtUtils.generateJwtCookie(userDetails);
 
@@ -69,6 +71,7 @@ public class AuthController {
 
         UserInfoResponse loginResponse = new UserInfoResponse(userDetails.getId(),userDetails.getUsername(),roles);
         return  ResponseEntity.ok().header(HttpHeaders.SET_COOKIE,jwtCookie.toString()).body(loginResponse);
+
     }
 
     @GetMapping("/username")
