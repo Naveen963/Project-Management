@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e2a04a6-c692-4902-bf21-3e4db4470823" name="Changes" comment="Added exception handlers and sprint dtos and model and repository and added methods in IssueRepository">
+    <list default="true" id="0e2a04a6-c692-4902-bf21-3e4db4470823" name="Changes" comment="added webconfig for cors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/ProjectmanagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/ProjectmanagementApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/projectmanagement/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/projectmanagement/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/projectmanagement/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/projectmanagement/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/projectmanagement/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/UI/projectmanagement/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/projectmanagement/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/UI/projectmanagement/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/projectmanagement/src/pages/SignIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/UI/projectmanagement/src/pages/SignIn.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,16 +54,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ProjectmanagementApplication.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/CH20408545/Desktop/Java/Project Management/Backend/projectmanagement/src/main/java/com/projectmanagement"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ProjectmanagementApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/CH20408545/Desktop/Java/Project Management/Backend/projectmanagement/src/main/java/com/projectmanagement&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.projectmanagement.repository" />
@@ -71,6 +74,7 @@
       <recent name="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/security/jwt" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.projectmanagement.security" />
       <recent name="com.projectmanagement.dto" />
       <recent name="com.projectmanagement.security.response" />
       <recent name="com.projectmanagement.security.request" />
@@ -160,7 +164,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751738253101</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="resolved auth  issue">
+      <option name="closed" value="true" />
+      <created>1751917106043</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1751917106043</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added webconfig for cors">
+      <option name="closed" value="true" />
+      <created>1751917263598</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1751917263598</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -170,7 +190,9 @@
     <MESSAGE value="sign-in router added" />
     <MESSAGE value="signout , userdetails api logic added" />
     <MESSAGE value="Added exception handlers and sprint dtos and model and repository and added methods in IssueRepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added exception handlers and sprint dtos and model and repository and added methods in IssueRepository" />
+    <MESSAGE value="resolved auth  issue" />
+    <MESSAGE value="added webconfig for cors" />
+    <option name="LAST_COMMIT_MESSAGE" value="added webconfig for cors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -187,6 +209,11 @@
             <option name="lambda-ordinal" value="0" />
           </properties>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/controller/AuthController.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
