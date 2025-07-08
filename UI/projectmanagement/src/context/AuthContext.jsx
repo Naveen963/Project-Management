@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
             .then(res => setUser(res.data))
             .catch(() => setUser(null))
             .finally(() => setIsLoading(false))
-    })
+    }, [])
 
     return (
         <AuthContext.Provider value={{ user, setUser, loading }}>

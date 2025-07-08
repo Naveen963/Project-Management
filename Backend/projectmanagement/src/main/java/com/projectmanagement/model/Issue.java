@@ -18,7 +18,7 @@ public class Issue extends  AuditBase {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long issueId;
+    private Long id;
 
     private String title;
 

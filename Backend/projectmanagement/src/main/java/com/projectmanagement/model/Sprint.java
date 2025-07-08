@@ -18,7 +18,7 @@ public class Sprint {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long sprintId;
+    private Long id;
 
 
     private String name;

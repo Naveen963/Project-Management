@@ -1,8 +1,6 @@
 package com.projectmanagement.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -15,10 +13,20 @@ import java.time.LocalDateTime;
 @Data
 public class AuditBase {
 
-    @CreatedDate
-    @Column(updatable = false)
+    @Column(nullable = false,updatable = false)
     private LocalDateTime createdAt;
 
-    @LastModifiedDate
-    private  LocalDateTime updatedAt;
+    @Column(nullable = false)
+    private LocalDateTime updatedAt;
+
+    @PrePersist
+    protected void onCreate(){
+        this.createdAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
+    }
+
+    @PreUpdate
+    protected void onUpdate(){
+        this.updatedAt = LocalDateTime.now();
+    }
 }

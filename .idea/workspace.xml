@@ -5,13 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e2a04a6-c692-4902-bf21-3e4db4470823" name="Changes" comment="added webconfig for cors">
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/controller/DashboardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/dto/DashboardSummaryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/dto/FullDashboardResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/dto/RecentIssueDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/dto/RecentProjectDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/ProjectMember.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/repository/ProjectMemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/repository/ProjectRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/service/DashboardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/projectmanagement/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/projectmanagement/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/projectmanagement/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/projectmanagement/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/projectmanagement/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/UI/projectmanagement/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/projectmanagement/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/UI/projectmanagement/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/projectmanagement/src/pages/SignIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/UI/projectmanagement/src/pages/SignIn.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/AuditBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/AuditBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/Issue.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/Issue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/Sprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/Sprint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/repository/IssueRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/repository/IssueRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/security/services/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/util/AuthUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/projectmanagement/src/main/java/com/projectmanagement/util/AuthUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/projectmanagement/src/context/AuthContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/UI/projectmanagement/src/context/AuthContext.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/projectmanagement/src/routes/PrivateRoute.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/UI/projectmanagement/src/routes/PrivateRoute.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +36,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
-        <option value="Interface" />
         <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>

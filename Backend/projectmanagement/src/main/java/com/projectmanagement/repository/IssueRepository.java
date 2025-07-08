@@ -26,10 +26,19 @@ public interface IssueRepository extends JpaRepository<Issue,Long> {
     List<Issue> findByAssignedToAndStatus(User user, IssueStatus issueStatus);
     List<Issue> findBySprintAndStatus(Sprint sprint,IssueStatus issueStatus);
 
+    long countByStatus(IssueStatus status);
+
+    List<Issue> findTop3ByOrderByCreatedAtDesc();
+
+    List<Issue> findByTitleContainingIgnoreCase(String title);
+
+    List<Issue> findByProjectId(Long projectId);
+
+    List<Issue> findByAssignedToId(Long assigneeId);
 
     @Query("""
             Select
-            i.issueId AS id,
+            i.id AS id,
             i.title AS title,
             i.status AS status,
             i.priority AS priority,
